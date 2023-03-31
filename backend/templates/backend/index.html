@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>website name</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body>
+	<header class="main_header">
+		<div class="container">
+			<nav class="navbar">
+		        <div class="brand-title">BGD</div>
+		        <a href="#" class="toggle-button">
+		          <span class="bar"></span>
+		          <span class="bar"></span>
+		          <span class="bar"></span>
+		        </a>
+		        <div class="navbar-links">
+		          <ul>
+		            <li><a href="#home">HOME</a></li>
+		            <li><a href="#about">ABOUT</a></li>
+		            <li><a href="#services">SERVICES</a></li>
+		            <li><a href="#pricing">PRICING</a></li>
+		            <li><a href="#signup">SIGNUP</a></li>
+		          </ul>
+		        </div>
+      		</nav>
+		</div>
+	</header>
+
+	<section class="main_hero">
+		<div class="container">
+			<div class="overlay_text">
+				<h3>Welcome to</h3>
+				<h1>BLACK GHOST DIGITAL</h1>
+				<p>
+					The only platform you are ever going to need for
+					your dropshipping and online store. We here are about
+					action and not the BS advice people give online like, 
+					fixing your mindset. WTF!
+				</p>
+				<button><a href="#signup">Sign Up</a></button>
+			</div>
+		</div>
+	</section>
+
+	<section class="about_section" id="about">
+		<h2>Who the <span>F</span> are we?</h2>
+		<div class="container">
+			<div class="left">
+				<img src="{% static 'imgs/1 (4).jpg' %}" class="img">
+			</div>
+			<div class="right">
+				<p>
+					Dropshipping is hard right? But not everyone
+					understands that because of all the guru's
+					going around online making themselves to be experts 
+					after 1 sale and try selling you shitty courses with
+					vague and BS advice. Like you need to fix your mindset
+					that's good and all but that won't help increase traffic to your
+					store and make more sales. That's why we are here. WE HELP SOLVE
+					THAT PROBLEM!
+				</p>
+				<button><a href="#signup">Sign Up</a></button>
+			</div>
+		</div>
+	</section>
+
+	<section class="services_section" id="services">
+		<h2>Services we offer to <span>HELP</span> you.</h2>
+		<div class="container">
+			<div class="service service1">
+				<div class="service_overlay_text">
+					<h3>Search Engine Optimisation(SEO)</h3>
+				</div>
+			</div>
+
+			<div class="service service2">
+				<div class="service_overlay_text">
+					<h3>Digital Marketing</h3>
+				</div>
+			</div>
+
+			<div class="service service3">
+				<div class="service_overlay_text">
+					<h3>Custom Web Design & Development</h3>
+				</div>
+			</div>
+
+			<div class="service service4">
+				<div class="service_overlay_text">
+					<h3>Increase traffic & sales</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pricing_section" id="pricing">
+		<h2>Plans for you</h2>
+		<div class="container">
+			<div class="price">
+				<div class="top_part">
+					<h3>$25 <span>p/m</span></h3>
+				</div>
+				<div class="bottom_part">
+					<h4>BASIC PLAN</h4>
+
+					<ol class="features">
+						<li>Increase traffic to your website</li>
+						<li>Increase your website seo</li>
+						<li>Market your website for free</li>
+					</ol>
+
+					<button><a href="#signup">Sign Up</a></button>
+				</div>
+			</div>
+
+			<div class="price">
+				<div class="top_part">
+					<h3>$50 <span>p/m</span></h3>
+				</div>
+				<div class="bottom_part">
+					<h4>STANDARD PLAN</h4>
+
+					<ol class="features">
+						<li>Tier1 features</li>
+						<li>Custom content creation</li>
+						<li>Run paid ads</li>
+						<li>1 ecommerce website</li>
+						<li>1 website revision</li>
+					</ol>
+
+					<button><a href="#signup">Sign Up</a></button>
+				</div>
+			</div>
+
+			<div class="price">
+				<div class="top_part">
+					<h3>$100 <span>p/m</span></h3>
+				</div>
+				<div class="bottom_part">
+					<h4>GOD TIER PLAN</h4>
+
+					<ol class="features">
+						<li>Basic tier features</li>
+						<li>standard tier features</li>
+						<li>10 custom e-commerce websites</li>
+						<li>10 website revisions</li>
+					</ol>
+
+					<button><a href="#signup">Sign Up</a></button>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<section class="signup_section" id="signup">
+		<h2>Sign Up here today</h2>
+		<div class="container">
+			<div class="left">
+				<img src="{% static 'imgs/1 (5).jpg' %}" class="signup_img">
+			</div>
+			<div class="right">
+				<form class="actual_form" action="" method="post">
+					{% csrf_token %}
+					<div class="single_input">
+						<label>Username:</label>
+						<input type="text" name="username" placeholder="Please enter your username">
+					</div>
+					<div class="single_input">
+						<label>Email:</label>
+						<input type="email" name="email" placeholder="Please enter your email">
+					</div>
+					<div class="single_input">
+						<label>Password:</label>
+						<input type="password" name="password" placeholder="Please enter your password">
+					</div>
+					<div class="single_input">
+						<label>Confirm Password:</label>
+						<input type="password" name="confirm_password" placeholder="Please confirm your password">
+					</div>
+
+					<button class="signup_btn" type="submit">Sign Up</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<h3>@COPYRIGHT 2023 BLACK GHOST DIGITAL</h3>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
